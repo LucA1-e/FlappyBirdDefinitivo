@@ -37,7 +37,11 @@ class FlappyGame extends FlameGame
           ),
         );
 
-  static const Set<LogicalKeyboardKey> _flapKeys = <LogicalKeyboardKey>{
+  // `final`, não `const`: LogicalKeyboardKey não tem igualdade primitiva,
+  // então o compilador rejeita um Set const dessas chaves (erro visto no
+  // build: "Constant evaluation error... does not have a primitive
+  // equality"). `final` calcula o mesmo Set uma única vez, em runtime.
+  static final Set<LogicalKeyboardKey> _flapKeys = <LogicalKeyboardKey>{
     LogicalKeyboardKey.space,
     LogicalKeyboardKey.arrowUp,
     LogicalKeyboardKey.keyW,
