@@ -1,0 +1,22 @@
+name: flappy_bird_v5
+publish_to: 'none'
+
+environment:
+  sdk: '>=3.11.0 <4.0.0'
+  flutter: '>=3.47.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flame: ^1.38.2
+
+dev_dependencies:
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
+
+  # Declarar a pasta inteira evita esquecer de registrar uma imagem nova
+  # (era o caso de pipe_top.png, pipe_bottom.png e Designer.png).
+  assets:
+    - assets/images/

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <base href="$FLUTTER_BASE_HREF">
+
+  <meta charset="UTF-8">
+  <!-- Sem esta tag o navegador do celular renderiza a página com 980px
+       de largura e o jogo aparece minúsculo. -->
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="description" content="Flappy Bird feito em Flutter + Flame.">
+  <meta name="theme-color" content="#71C5CF">
+
+  <!-- iOS -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Flappy Bird">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <title>Flappy Bird</title>
+  <link rel="manifest" href="manifest.json">
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      background: #71C5CF;
+      overflow: hidden;
+      /* Evita "puxar para atualizar" e zoom de duplo toque durante o jogo. */
+      overscroll-behavior: none;
+      touch-action: manipulation;
+      -webkit-tap-highlight-color: transparent;
+    }
+    body { display: flex; }
+    flutter-view, flt-glass-pane { flex: 1; }
+  </style>
+</head>
+<body>
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+</html>
